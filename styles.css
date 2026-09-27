@@ -1933,3 +1933,53 @@ body {
         gap: 12px;
     }
 }
+
+/* ═══════════════════════════════════════════════
+   PARTNER SECTION + HERO LOGO POLISH
+   ═══════════════════════════════════════════════ */
+
+/* Fix Contact button overflow on mobile */
+.partner-cta .btn-lg {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+    white-space: normal;
+    word-break: break-word;
+    text-align: center;
+    line-height: 1.4;
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .partner-cta .btn-lg {
+        font-size: 14px;
+        padding: 14px 16px;
+        gap: 6px;
+    }
+
+    .partner-cta .btn-lg svg,
+    .partner-cta .btn-lg i {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+    }
+
+    .partner-cta .btn-lg span,
+    .partner-cta .btn-lg {
+        overflow-wrap: anywhere;
+    }
+}
+
+/* Hero logo — mask the square JPEG edges */
+.hero-logo {
+    border-radius: 50%;
+    box-shadow: 0 0 80px rgba(59, 130, 246, 0.45);
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+}
