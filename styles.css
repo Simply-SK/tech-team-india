@@ -1830,3 +1830,106 @@ body {
     max-width: 100vw;
     max-height: 100vh;
 }
+
+/* ═══════════════════════════════════════════════
+   MOBILE POLISH FIXES
+   ═══════════════════════════════════════════════ */
+
+/* Fix horizontal overflow (grey strip on right) */
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+.bg-orbs {
+    overflow: hidden;
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+}
+
+.orb {
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+/* Fix navbar squish on mobile */
+@media (max-width: 640px) {
+    .brand-text {
+        display: none;
+        /* hide "Tech Team India EST. 2026" text */
+    }
+
+    .brand {
+        gap: 0;
+    }
+
+    .brand-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Tighten navbar padding so items don't crowd */
+    .navbar-inner {
+        padding: 0 12px;
+        gap: 8px;
+    }
+
+    .nav-actions {
+        gap: 6px;
+    }
+
+    .btn-sm {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .btn-sm span {
+        display: none;
+        /* hide "Join" text, keep icon only */
+    }
+
+    .btn-sm {
+        padding: 10px 12px;
+        /* tighter icon-only button */
+    }
+}
+
+/* Fix footer text wrapping on mobile */
+@media (max-width: 640px) {
+    .footer-bottom {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+        padding: 0 16px;
+    }
+
+    .footer-dot {
+        display: none;
+    }
+
+    .footer-bottom a {
+        word-break: break-all;
+        font-size: 13px;
+    }
+}
+
+/* Tighten FAQ spacing on mobile */
+@media (max-width: 640px) {
+    .section {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .section-head {
+        margin-bottom: 40px;
+    }
+
+    .faq-list {
+        gap: 12px;
+    }
+}
