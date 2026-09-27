@@ -1811,3 +1811,22 @@ html:not(.dark) .faq-item {
 .btn .btn-svg+ :not(svg) {
     margin-left: 6px;
 }
+
+/* ─── Mobile overflow fix ─── */
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+.bg-orbs {
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.orb {
+    /* ensure orbs don't push the body wider */
+    max-width: 100vw;
+    max-height: 100vh;
+}
